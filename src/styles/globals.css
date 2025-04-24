@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Hauptfarben */
+  --background: #fdfef1;
+  --text: #242702; /* Statt foreground, um zu deinem Code zu passen */
+
+  /* Primärfarben */
+  --primary: #d4f519;
+  --primary-light: #5656fa;
+  --primary-dark: #2020e0;
+
+  /* Sekundärfarben */
+  --secondary: #d5e9f4; /* Ein sehr helles Blau als Hintergrund */
+  --secondary-light: #426593;
+  --secondary-dark: #6787b7;
+
+  /* Akzentfarbe */
+  --accent: #664de1; /* Ein warmes Orange als Akzent */
+
+  /* Schriftarten */
+  --font-geist-sans: "Geist Sans";
+  --font-geist-mono: "Geist Mono";
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --text: #d5e9f4;
+
+    --primary: #3838f8;
+    --primary-light: #5656fa;
+    --primary-dark: #2020e0;
+
+    --secondary: #151a29;
+    --secondary-light: #1e263a;
+    --secondary-dark: #0d1220;
+
+    --accent: #f5a524;
   }
 }
 
+/* Grundlegende Stile */
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+/* Verbesserte Text-Lesbarkeit */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Fließende Übergänge für alle Elemente mit Hover */
+a,
+button {
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+/* Optional: Globale Stile für bestimmte Elemente */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-geist-sans);
+  line-height: 1.2;
+}
+
+code,
+pre {
+  font-family: var(--font-geist-mono);
 }
