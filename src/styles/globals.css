@@ -1,33 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Hauptfarben */
   --background: #fdfef1;
   --text: #242702; /* Statt foreground, um zu deinem Code zu passen */
 
-  /* Primärfarben */
   --primary: #d4f519;
   --primary-light: #5656fa;
   --primary-dark: #2020e0;
 
-  /* Sekundärfarben */
-  --secondary: #d5e9f4; /* Ein sehr helles Blau als Hintergrund */
+  --secondary: #d5e9f4;
   --secondary-light: #426593;
   --secondary-dark: #6787b7;
 
-  /* Akzentfarbe */
-  --accent: #664de1; /* Ein warmes Orange als Akzent */
-
-  /* Schriftarten */
-  --font-geist-sans: "Geist Sans";
-  --font-geist-mono: "Geist Mono";
+  --accent: #664de1;
 }
 
-/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --text: #d5e9f4;
+    --background: #16151a;
+    --text: #e6ddd6a4;
 
     --primary: #3838f8;
     --primary-light: #5656fa;
@@ -68,11 +59,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-geist-sans), sans-serif;
   line-height: 1.2;
 }
 
 code,
 pre {
-  font-family: var(--font-geist-mono);
+  font-family: var(--font-geist-mono), monospace;
 }
