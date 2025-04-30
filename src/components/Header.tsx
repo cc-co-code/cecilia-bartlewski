@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -9,8 +8,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 bg-background border-b border-text/10 py-4 z-50">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
-          {/* Logo/Marke */}
-          <div className="text-text font-bold text-xl">
+          <div className="text-text font-bold text-xl font-mono">
             <Link href="/">Cecilia Bartlewski</Link>
           </div>
 
@@ -18,72 +16,60 @@ export default function Header() {
           <nav className="hidden md:flex space-x-8">
             <Link
               href="#projects"
-              className="text-text hover:text-primary transition-colors"
+              className="text-text hover:text-primary transition-colors font-mono"
             >
-              Projekte
+              Projects
             </Link>
             <Link
               href="#about"
-              className="text-text hover:text-primary transition-colors"
+              className="text-text hover:text-primary transition-colors font-mono"
             >
-              Über mich
+              About me
             </Link>
             <Link
               href="#contact"
-              className="text-text hover:text-primary transition-colors"
+              className="text-text hover:text-primary transition-colors font-mono"
             >
-              Kontakt
+              Contact
             </Link>
           </nav>
-
-          {/* Mobile Menü Button */}
-          <button
-            className="md:hidden text-text"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
+      {/* Floating Action Button und Menü */}
+      <div className="md:hidden">
+        <button
+          className="fixed bottom-6 right-6 bg-primary text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg z-50 text-2xl"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? "×" : "+"}
+        </button>
+
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-text/10">
-            <nav className="flex flex-col space-y-4">
+          <div className="fixed bottom-24 right-6 z-40">
+            <div className="flex flex-col-reverse gap-4">
               <Link
-                href="#projects"
-                className="text-text hover:text-primary transition-colors"
+                href="#contact"
+                className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-110"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Projekte
+                📧
               </Link>
               <Link
                 href="#about"
-                className="text-text hover:text-primary transition-colors"
+                className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-110"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Über mich
+                👩
               </Link>
               <Link
-                href="#contact"
-                className="text-text hover:text-primary transition-colors"
+                href="#projects"
+                className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-110"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Kontakt
+                📂
               </Link>
-            </nav>
+            </div>
           </div>
         )}
       </div>

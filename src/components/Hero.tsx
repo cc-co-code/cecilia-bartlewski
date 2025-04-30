@@ -1,5 +1,6 @@
-// src/components/Hero.tsx
 import React from "react";
+import Image from "next/image";
+import profilePic from "../images/profile.jpg";
 
 interface HeroProps {
   title: string;
@@ -18,10 +19,10 @@ export default function Hero({ title, subtitle }: HeroProps) {
           <p className="text-xl text-text/80">{subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="bg-primary hover:bg-primary-dark text-text font-medium py-3 px-6 rounded-md transition-colors">
-              Projekte entdecken
+              Look at my projects
             </button>
             <button className="bg-primary border border-accent text-text font-medium py-3 px-6 rounded-md transition-colors">
-              Kontakt aufnehmen
+              Contact me
             </button>
           </div>
         </div>
@@ -29,15 +30,15 @@ export default function Hero({ title, subtitle }: HeroProps) {
         {/* Hero Image */}
         <div className="relative h-80 md:h-96 rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-            <span className="text-primary font-medium">Dein Profilbild</span>
+            {/* <span className="text-primary font-medium">Dein Profilbild</span> */}
           </div>
-          {/* Wenn du ein Bild hast, kannst du es so einbinden:
-          <img 
-            src="/images/profile.jpg" 
-            alt="Cecilia Bartlewski" 
+
+          <Image
+            src={profilePic}
+            alt="Cecilia Bartlewski"
+            quality={100}
             className="object-cover w-full h-full"
           />
-          */}
         </div>
       </div>
     </section>
