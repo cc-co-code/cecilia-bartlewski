@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "media",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -10,7 +11,7 @@ const config: Config = {
       colors: {
         // Die Hauptfarben basierend auf CSS-Variablen
         background: "var(--background)",
-        text: "var(--text)", // Statt 'foreground', um zu deinem Code zu passen
+        text: "var(--text)",
         primary: {
           DEFAULT: "var(--primary)",
           light: "var(--primary-light)",

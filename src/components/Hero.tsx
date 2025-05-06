@@ -13,7 +13,10 @@ export default function Hero({ title, subtitle }: HeroProps) {
     <section className="py-20 md:py-32 px-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
-          <h2 className="text-5xl md:text-2xl font-bold text-primary leading-tight">
+          <h2
+            className="text-5xl md:text-2xl font-bold text-primary leading-tight"
+            style={{ color: "var(--primary-light)" }}
+          >
             {title}
           </h2>
           <Image
