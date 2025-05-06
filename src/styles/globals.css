@@ -30,8 +30,14 @@
 
     --accent: #f5a524;
   }
-}
 
+  .logo {
+    filter: invert(1);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
 /* Grundlegende Stile */
 body {
   background: var(--background);
@@ -66,4 +72,19 @@ h6 {
 code,
 pre {
   font-family: var(--font-geist-mono), monospace;
+}
+@keyframes wobble {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+.logo {
+  animation: wobble 0.4s ease-in-out infinite;
 }

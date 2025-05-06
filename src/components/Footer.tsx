@@ -15,8 +15,7 @@ export default function Footer() {
               Cecilia Bartlewski
             </h3>
             <p className="text-foreground/70 mb-4">
-              Moderne Webentwicklung mit Next.js, React, TypeScript und Tailwind
-              CSS.
+              Webdevelopment with Next.js, React, TypeScript and Tailwind CSS.
             </p>
             <div className="flex space-x-4">
               <a
@@ -73,7 +72,7 @@ export default function Footer() {
                   href="/"
                   className="text-foreground/70 hover:text-primary transition-colors"
                 >
-                  Startseite
+                  Home
                 </Link>
               </li>
               <li>
@@ -81,7 +80,7 @@ export default function Footer() {
                   href="/projects"
                   className="text-foreground/70 hover:text-primary transition-colors"
                 >
-                  Projekte
+                  Projects
                 </Link>
               </li>
               <li>
@@ -89,7 +88,7 @@ export default function Footer() {
                   href="/about"
                   className="text-foreground/70 hover:text-primary transition-colors"
                 >
-                  Über mich
+                  About me
                 </Link>
               </li>
             </ul>
@@ -97,7 +96,7 @@ export default function Footer() {
 
           {/* Kontakt */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-4">Kontakt</h3>
+            <h3 className="text-lg font-bold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-foreground/70">
                 <a
@@ -122,7 +121,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-foreground/10 mt-8 pt-8 text-center text-foreground/60">
-          <p>© {currentYear} Cecilia Bartlewski. Alle Rechte vorbehalten.</p>
+          <p>© {currentYear} Cecilia Bartlewski. All Rights reserved.</p>
         </div>
       </div>
     </footer>

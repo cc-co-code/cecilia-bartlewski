@@ -19,14 +19,19 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div
-      className={`${geistSans.className} ${geistMono.className} font-sans bg-background text-foreground min-h-screen flex flex-col`}
+      className={`${geistSans.className} ${geistMono.className} font-sans text-text bg-background min-h-screen flex flex-col`}
     >
       {/* Header mit Navigation */}
       <Header />
 
       {/* Hauptinhalt der Seite */}
       <main>
-        <Hero title={""} subtitle={""} />
+        <Hero
+          title={"Hi, I'm Cecilia "}
+          subtitle={
+            "A web developer with an eye for detail, a heart for clean user experiences, and a drive to build digital spaces that truly support people. "
+          }
+        />
         {/* <Projects />
         <About />
         <Contact /> */}
