@@ -11,6 +11,16 @@ interface HeroProps {
 export default function Hero({ title, subtitle }: HeroProps) {
   return (
     <section className="py-20 md:py-32 px-6 max-w-6xl mx-auto">
+      <div className="bg-yellow-100 text-yellow-800 border border-yellow-300 rounded-md px-4 py-3 mx-auto mt-1 mb-9 flex items-center gap-3 shadow-sm">
+        <span className="text-xl">🐣🛠️</span>
+        <div className="text-sm">
+          <p className="font-semibold">This site is still hatching...</p>
+          <p className="text-xs">
+            I&apos;m currently building it with lots of love — feel free to
+            explore while it&apos;s growing! ✨
+          </p>
+        </div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <h2
@@ -22,7 +32,7 @@ export default function Hero({ title, subtitle }: HeroProps) {
           <Image
             src={smiley}
             alt="Cecilia Bartlewski"
-            className="w-32 h-32 rounded-full logo"
+            className="w-32 h-32 rounded-full logo mx-auto"
             quality={100}
           />
 

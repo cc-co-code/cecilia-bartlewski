@@ -31,6 +31,7 @@ export default function Home() {
             "A web developer with an eye for detail, a heart for clean user experiences, and a drive to build digital spaces that truly support people. "
           }
         />
+
         <Projects />
         {/* Uncomment these components when they are ready */}
         {/* <About />

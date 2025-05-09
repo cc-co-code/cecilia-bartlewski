@@ -4,13 +4,15 @@ export type ProjectData = {
   image: string;
   link: string;
   technologies: string[];
+  badge?: string;
+  badgeColor?: string;
 };
 
 export const projects: ProjectData[] = [
   {
     title: "ALBY - Abortion Support App",
     description:
-      "Work in Progress! ALBY is a mobile-first web app dedicated to supporting women seeking information and community around abortion. The app provides verified resources, links to trusted articles, and a safe space where users can connect, share experiences, and find support on this sensitive topic.",
+      "ALBY is a mobile-first web app dedicated to supporting women seeking information and community around abortion. The app provides verified resources, links to trusted articles, and a safe space where users can connect, share experiences, and find support on this sensitive topic.",
     image: "/images/ALBY.png",
     link: "https://cece-capstone-project.vercel.app/",
     technologies: [
@@ -22,6 +24,8 @@ export const projects: ProjectData[] = [
       "NextAuth",
       "CSS",
     ],
+    badge: "Work in Progress",
+    badgeColor: "bg-orange-400 text-black",
   },
   {
     title: "Website for a Certified Supervisor",
