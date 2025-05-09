@@ -103,15 +103,15 @@ export default function Footer() {
                   href="mailto:info@example.com"
                   className="hover:text-primary transition-colors"
                 >
-                  info@example.com
+                  cecilia@bartlewski.de
                 </a>
               </li>
               <li className="text-foreground/70">
                 <a
-                  href="tel:+491234567890"
+                  href="tel:+49 157 71550031"
                   className="hover:text-primary transition-colors"
                 >
-                  +49 123 456 7890
+                  +49 157 7155003
                 </a>
               </li>
               <li className="text-foreground/70">Berlin, Deutschland</li>

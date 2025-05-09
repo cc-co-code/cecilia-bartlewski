@@ -16,7 +16,7 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+            className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
           >
             <div className="overflow-hidden group">
               <Image
@@ -27,6 +27,14 @@ export default function Projects() {
                 className="w-full h-48 object-cover trasition duration-500 grayscale group-hover:grayscale-0 ease-in-out blur-sm group-hover:blur-none scale-105 group-hover:scale-100"
               />
             </div>
+            {project.badge && (
+              <div
+                className={`absolute top-8 -left-6 -rotate-45 text-xs font-bold px-3 py-1 ${project.badgeColor}`}
+              >
+                {project.badge}
+              </div>
+            )}
+
             <div className="p-6">
               <h3 className="text-xl font-semibold text-text dark:text-white">
                 {project.title}
@@ -44,14 +52,13 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-primary mt-3 inline-block hover:underline"
               >
-                Projekt ansehen →
+                View project →
               </a>
             </div>
           </div>
